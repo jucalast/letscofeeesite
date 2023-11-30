@@ -1,0 +1,70 @@
+@media screen and (max-width: 900px){
+
+    h1 {
+        max-width: 0px;
+        line-height: 10px;
+        position: relative;
+        right: 0px;
+        top: 50px;
+        
+    }
+
+    header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 30px;
+    margin: 10px;
+    padding: 1px;
+    max-width: 1px;
+    }
+
+
+    ul{  
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px ;
+        justify-content: space-between;
+        position: relative;
+        right: 60px;
+        top: 60px;
+    }
+
+    main{  
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px ;
+        justify-content: space-between;
+        position: relative;
+        left: 30px;
+       
+    }
+    
+    #Inscreva-se-btn{
+        border: 2px solid rgb(132, 13, 201);
+        padding: 0px;
+        border-radius: 15px;
+        width: 105px;
+        height: 65px;   
+    }
+    
+    #Inscreva-se-btn:hover{
+        background-color:rgb(132, 13, 201);
+        color:white
+    }
+
+    
+h2 {
+    line-height: 0px;
+    color:rgb(132, 13, 201);
+    position: relative;
+
+    font-family: 'poppinsmedium', Times,
+}
+
+#porra {
+    position: relative;
+    top: 100px;
+
+}
+}

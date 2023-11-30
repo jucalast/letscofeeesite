@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 3x3 com Filtros</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .filter {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter">
+        <label>
+            <input type="checkbox" class="filter-checkbox" data-filter="category1"> Categoria 1
+        </label>
+        <label>
+            <input type="checkbox" class="filter-checkbox" data-filter="category2"> Categoria 2
+        </label>
+        <label>
+            <input type="checkbox" class="filter-checkbox" data-filter="category3"> Categoria 3
+        </label>
+    </div>
+
+    <div class="grid-container">
+        <div class="card" data-category="category1">Card 1 (Categoria 1)</div>
+        <div class="card" data-category="category2">Card 2 (Categoria 2)</div>
+        <div class="card" data-category="category3">Card 3 (Categoria 3)</div>
+        <div class="card" data-category="category1">Card 4 (Categoria 1)</div>
+        <div class="card" data-category="category2">Card 5 (Categoria 2)</div>
+        <div class="card" data-category="category3">Card 6 (Categoria 3)</div>
+        <div class="card" data-category="category1">Card 7 (Categoria 1)</div>
+        <div class "card" data-category="category2">Card 8 (Categoria 2)</div>
+        <div class="card" data-category="category3">Card 9 (Categoria 3)</div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.filter-checkbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', filterCards);
+        });
+
+        function filterCards() {
+            const selectedCategories = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.getAttribute('data-filter'));
+
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (selectedCategories.length === 0 || selectedCategories.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

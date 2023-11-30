@@ -1,0 +1,41 @@
+/* Estilos para a página de produtos */
+
+header {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+  }
+  
+  nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  main {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #product-list li {
+    margin-bottom: 10px;
+  }
+  

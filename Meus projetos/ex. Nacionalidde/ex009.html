@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="styles.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
+    <title>SUA NACIONALIDADE</title>
+</head>
+<body>
+
+    <div id="foto">
+        <article>
+            <img src="images__1_-removebg-preview.png" alt="brasil">
+        </article>
+    </div>
+    <main>
+    <div id="title"><h1>Sua Nacionalidade:</h1>
+    <h2>Qual país você vive?</h2></div>
+    
+    <input type="Text" name="txtpais" id="txtpais" placeholder="Seu país">
+    <div id="button"></div><input type="button" value="  Quero saber minha nacionalidade >" id="button" onclick="calcular()"></div></main>
+    <div id="box">
+    </div>
+    <div id="res">
+
+    </div> 
+    <div id="evt">
+    
+       <script> 
+    function calcular(){
+        var txtp = window.document.querySelector('input#txtpais')
+        var res = window.document.querySelector('div#res')
+        var vel = (txtp.value)
+        res.innerHTML = `<p>Seu país é o(a) <strong> ${vel}</strong></p>`
+        if (vel != 'Brasil'){
+            res.innerHTML+=`<p>você é <strong>ESTRANGEIRO</strong>, seja muito bem-vindo ao Brasil!</p>`
+        }else{
+            res.innerHTML+= `<p> Você é <strong>BRASILEIRO</strong>, mais um patriota pra conta!</p>`  
+        }
+        }
+        </script>
+        </div>
+        
+        <style>
+            @font-face {
+                font-family:'poppins';
+                src: url('Poppins-Light.otf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+        }
+        </style>
+       
+</body>
+</html>
